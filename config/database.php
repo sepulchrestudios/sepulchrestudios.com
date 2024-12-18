@@ -97,6 +97,22 @@ return [
             'sslmode' => 'prefer',
         ],
 
+        // session-specific DB configuration so we can support sharing session data across our applications but
+        // we can also use a sensible fallback of the default connection otherwise
+        'session' => [
+            'driver' => 'pgsql',
+            'host' => env('SESSION_DB_HOST', env('DB_HOST', '127.0.0.1')),
+            'port' => env('SESSION_DB_PORT', env('DB_PORT', '5432')),
+            'database' => env('SESSION_DB_DATABASE', env('DB_DATABASE', 'laravel')),
+            'username' => env('SESSION_DB_USERNAME', env('DB_USERNAME', 'root')),
+            'password' => env('SESSION_DB_PASSWORD', env('DB_PASSWORD', '')),
+            'charset' => env('SESSION_DB_CHARSET', env('DB_CHARSET', 'utf8')),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'search_path' => 'public',
+            'sslmode' => 'prefer',
+        ],
+
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'url' => env('DB_URL'),
