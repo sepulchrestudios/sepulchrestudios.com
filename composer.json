@@ -28,7 +28,7 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "SepulchreStudios\\CharonShared\\": "src/sepulchrestudios/charon-shared"
+            "SepulchreStudios\\CharonShared\\": "src/sepulchrestudios/charon-shared/src"
         }
     },
     "autoload-dev": {
