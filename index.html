@@ -387,7 +387,6 @@
          }
 
          #request-quote {
-            min-height: var(--content-container-default-min-height);
             background-color: var(--request-quote-section-gradient-color-end);
             background: linear-gradient(to bottom, var(--request-quote-section-gradient-color-start) var(--request-quote-section-gradient-first-color-stop-distance), var(--request-quote-section-gradient-color-end));
             color: var(--request-quote-section-text-color);
@@ -401,6 +400,9 @@
             p {
                text-align: center;
             }
+         }
+         #request-quote.large {
+            min-height: var(--content-container-default-min-height);
          }
          #request-quote-form {
             width: var(--request-quote-section-form-width);
@@ -446,7 +448,8 @@
                      box-shadow: 3px 3px 5px var(--shadow-color);
                   }
                }
-               input[type='submit'] {
+               input[type='submit'],
+               a.request-quote-btn {
                   margin-top: var(--request-quote-section-form-input-margin-top);
                   &.request-quote-btn {
                      cursor: pointer;
@@ -740,6 +743,19 @@
             </div>
             <div class="content">
                <div id="request-quote-form">
+                  <p>
+                     You may request a quote for our services by pressing the "Request a Quote" button below.
+                  </p>
+                  <p>
+                     For all <em>other</em> inquiries, please send a message to <a href="mailto:hello@sepulchrestudios.com">hello@sepulchrestudios.com</a>.
+                  </p>
+                  <p>
+                     <div class="form-input-control center-text">
+                        <a href="https://forms.gle/3Rqttres43jtgXis9" target="_blank" class="request-quote-btn">Request a Quote</a>
+                     </div>
+                  </p>
+               <!-- We're currently not going to use the built-in form from the mock-up -->
+               <!--
                   <p>Please get in touch with us for <strong>Mixing &amp; Mastering</strong> price quotes using this form.</p>
                   <p>For all other inquiries, including price quotes for other services, please email <a href="mailto:hello@sepulchrestudios.com">hello@sepulchrestudios.com</a>.</p>
                   <div id="request-quote-form-control-container">
@@ -798,6 +814,7 @@
                         </div>
                      </form>
                   </div>
+               -->
                </div>
             </div>
          </div>
