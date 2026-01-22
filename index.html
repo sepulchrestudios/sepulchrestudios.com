@@ -52,6 +52,7 @@
             --background-request-quote-button-opacity: 0.85;
             --background-request-quote-button-background-color: rgba(189, 141, 141, 0.75);
             --background-request-quote-button-background-color-hover: rgba(192, 0, 0, 0.5);
+            --background-request-quote-button-background-color-hover-bright: rgba(192, 0, 0, 1.0);
             --background-request-quote-button-color: var(--page-foreground-color);
 
             --background-arrow-down-margin-top: 20px;
@@ -89,6 +90,8 @@
             --services-section-services-container-width: calc(var(--services-section-services-container-item-count) * (var(--services-section-services-container-item-width) + (2 * var(--services-section-services-container-item-margin))));
 
             --audio-samples-background-color: var(--services-gradient-color-start);
+            --audio-samples-link-color: var(--background-request-quote-button-background-color);
+            --audio-samples-link-color-hover: var(--background-request-quote-button-background-color-hover-bright);
 
             --about-section-gradient-color-start: var(--services-gradient-color-start);
             --about-section-gradient-color-end: var(--services-gradient-color-end);
@@ -343,8 +346,34 @@
          }
 
          #audio-samples {
-            min-height: var(--content-container-default-min-height);
             background-color: var(--audio-samples-background-color);
+            #audio-samples-content {
+               padding: 35px 0;
+               .row {
+                  width: 800px;
+                  margin-left: auto;
+                  margin-right: auto;
+               }
+               .top-margin {
+                  margin-top: 75px;
+               }
+               .smaller-text {
+                  font-size: 0.9em;
+               }
+               .less-wide {
+                  width: 600px;
+               }
+               a {
+                  color: var(--audio-samples-link-color);
+                  text-decoration: none;
+                  &:hover {
+                     color: var(--audio-samples-link-color-hover);
+                  }
+               }
+            }
+         }
+         #audio-samples.large {
+            min-height: var(--content-container-default-min-height);
          }
 
          #about {
@@ -695,7 +724,51 @@
                <h2>Audio Samples</h2>
             </div>
             <div class="content">
-
+               <div id="audio-samples-content">
+                   <div class="row">
+                     <h4 class="center-text">The Proof Is in the Playback</h4>
+                     <p>
+                        Great audio isn't just heard; it's <strong>felt</strong>.
+                     </p>
+                     <p>
+                        Below is a curated selection of our mixing and mastering work, showcasing how we transform <strong>raw tracks into polished, professional releases</strong>.
+                     </p>
+                     <p>
+                        From the punchy transients of modern rock and pop to the pure aggression of death metal, these samples demonstrate our commitment to <strong>sonic balance, spatial depth, and commercial loudness</strong>.
+                     </p>
+                     <p>
+                        Explore our portfolio to hear how we maintain the artist's intent while ensuring every element shines across any listening environment.
+                     </p>
+                     <p>
+                        Click each listen link and press play and hear the difference professional engineering makes.
+                     </p>
+                   </div>
+                   <div class="row">
+                     <h4 class="center-text">Selected Samples</h4>
+                     <p>
+                        Band / Artist: <strong>Reno Vega</strong><br />
+                        Track Name: <em>I Got You</em><br />
+                        Genre: Rock / Stoner Rock<br />
+                        Recorded by Kristian Kohle at Kohlekeller Studio, Germany<br />
+                        <a href="https://www.dropbox.com/scl/fi/fm4cw6n1ob2qhxaz81etm/01-MatthewFritz-Portfolio_RenoVega_I-Got-You.wav?rlkey=u7nudsy8i6dt5p00wc3o3ewdo&st=u7666yv8&dl=0" target="_blank">Listen to "I Got You"</a> by Sepulchre Studios.
+                     </p>
+                     <p>
+                        Band / Artist: <strong>Raising Arizona</strong><br />
+                        Track Name: <em>Valentina</em><br />
+                        Genre: Rock / Pop Rock<br />
+                        Recorded by Bobby Torres at Frightbox Recording, USA<br />
+                        <a href="https://www.dropbox.com/scl/fi/z2lk75lob59f3mekmj2dn/02-MatthewFritz-Portfolio-RaisingArizona-Valentina.wav?rlkey=k3rjfadr9qxubeslunw9303zu&st=jotydsfd&dl=0" target="_blank">Listen to "Valentina"</a> by Sepulchre Studios.
+                     </p>
+                     <p>
+                        Band / Artist: <strong>Kanonenfieber</strong><br />
+                        Track Name: <em>Kampf und Sturm</em><br />
+                        Genre: Metal / Death Metal / Black Metal<br />
+                        Recorded by Kristian Kohle at Kohlekeller Studio, Germany<br />
+                        <a href="https://www.dropbox.com/scl/fi/hs2ykm3pjbmx1296wx21s/03-MatthewFritz-Portfolio_Kanonenfieber-Kampf-und-Sturm.wav?rlkey=v2kberziqog28yaa0hl9ianu0&st=x58ve79q&dl=0" target="_blank">Listen to "Kampf und Sturm"</a> by Sepulchre Studios.
+                     </p>
+                   </div>
+               </div>
+               
             </div>
          </div>
          <div id="about" class="content-container">
@@ -705,7 +778,7 @@
             <div class="content">
                <div id="about-content">
                   <div class="row">
-                     <h4 style="text-align:center;">Professional Audio Excellence since 2024</h4>
+                     <h4 class="center-text">Professional Audio Excellence since 2024</h4>
                      <p>
                         Founded in 2024, Sepulchre Studios was built on a simple mission: to provide creators, artists, bands, and brands with world-class sonics without the gatekeeping. We combine decade-honed technical expertise with a passion for storytelling to deliver audio that stands out in a crowded market.
                      </p>
